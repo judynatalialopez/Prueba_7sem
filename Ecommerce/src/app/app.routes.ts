@@ -14,5 +14,5 @@ export const routes: Routes = [
   {
     path: 'info-usuario',
     loadComponent: () => import('./pager/info-usuario/info-usuario.page').then( m => m.InfoUsuarioPage)
-  },
+  }
 ];
