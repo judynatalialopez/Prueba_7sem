@@ -1,26 +1,30 @@
 <section class="list-product">
+  <div class="container">
 
-  <div *ngIf="activo; else ContenidoElse">
-    MOSTRAR CONTENIDO
-  </div>
+    <div class="content-btn-top">
+      <div *ngIf="activo; else ContenidoElse" class="active">
+        MOSTRAR CONTENIDO
+      </div>
 
-  <ng-template #ContenidoElse>
-    NO MOSTRAR NADA
-  </ng-template>
+      <ng-template #ContenidoElse>
+        NO MOSTRAR NADA
+      </ng-template>
+    </div>
 
-  <ion-button (click)="cambiarValor()">Activar</ion-button>
-  <div class="content-info">
-    <h1>Lista Productos</h1>
-    <div class="content-grid-4">
-      <div *ngFor="let producto of listaproductos" class="card">
-        <h3>{{ producto.title }}</h3>
-        <div class="content-img">
-          <img [src]="producto.image" alt="imagen" />
-        </div>
-        <div class="txt">
-          <p>{{ producto.descripcion }}</p>
-          <p><strong>Categoria:</strong> {{ producto.categoria }}</p>
-          <p><strong>Precio:</strong> {{ producto.price }}</p>
+    <ion-button (click)="cambiarValor()">Activar</ion-button>
+    <div class="content-info">
+      <h1>Lista Productos</h1>
+      <div class="content-grid-4">
+        <div *ngFor="let producto of listaproductos" class="card">
+          <h3>{{ producto.title }}</h3>
+          <div class="content-img">
+            <img [src]="producto.image" alt="imagen" />
+          </div>
+          <div class="txt">
+            <p>{{ producto.descripcion }}</p>
+            <p><strong>Categoria:</strong> {{ producto.categoria }}</p>
+            <p><strong>Precio:</strong> {{ producto.price }}</p>
+          </div>
         </div>
       </div>
     </div>
