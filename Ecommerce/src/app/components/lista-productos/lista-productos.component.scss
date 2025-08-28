@@ -1,5 +1,5 @@
 .list-product {
-    background-color: white;
+    //background-color: white;
     color: black;
     .container {
         width: max(100% - 400px);
@@ -9,10 +9,13 @@
     }
 
     .content-grid-4 {
+        max-width: 1020px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 
-
+    .card {
+      background-color: white;
+    }
 }
