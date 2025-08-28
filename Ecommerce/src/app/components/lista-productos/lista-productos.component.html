@@ -1,0 +1,26 @@
+<div *ngIf="activo; else ContenidoElse">
+  MOSTRAR CONTENIDO
+</div>
+<h1>Lista Productos</h1>
+<div *ngFor="let producto of listaproductos">
+  <h1>producto</h1>
+  <img [src]="producto.image" alt="imagen"/>
+  <p>{{producto.title}}</p>
+</div>
+
+<ng-template #ContenidoElse>
+  No Mostrar Contenido ************************
+</ng-template>
+
+<ion-button (click)="cambiarValor()">Activar</ion-button>
+<br><br>
+
+
+
+
+<h1>PERSONA</h1>
+<div *ngFor="let persona of listaObjetos" >
+  <h1>persona</h1>
+  <p> la nombre es: {{persona.nombre}}, Edad{{persona.edad}}</p>
+
+</div>
