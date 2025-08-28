@@ -29,7 +29,7 @@ export class ListaProductosComponent  implements OnInit {
     price: "15.50",
     descripcion: "Una novela distópica sobre un futuro totalitario escrita por George Orwell.",
     categoria: "Ciencia Ficción",
-    image: "assets/img/book-01.jpeg" 
+    image: "assets/img/book-02.jpg" 
   },
   {
     id: "3",
@@ -37,7 +37,7 @@ export class ListaProductosComponent  implements OnInit {
     price: "10.99",
     descripcion: "Un cuento filosófico sobre la vida y el amor, escrito por Antoine de Saint-Exupéry.",
     categoria: "Infantil",
-    image: "assets/img/book-01.jpeg" 
+    image: "assets/img/book-03.jpg" 
   },
   {
     id: "4",
@@ -45,23 +45,23 @@ export class ListaProductosComponent  implements OnInit {
     price: "12.75",
     descripcion: "Una historia de amor y orgullo en la Inglaterra del siglo XIX, escrita por Jane Austen.",
     categoria: "Romance",
-    image: "assets/img/book-01.jpeg" 
+    image: "assets/img/book-04.jpg" 
   },
   {
-    id: "5",
-    title: "Sapiens: De animales a dioses",
-    price: "20.00",
-    descripcion: "Una exploración de la historia de la humanidad por Yuval Noah Harari.",
-    categoria: "Historia",
-    image: "assets/img/book-01.jpeg" 
-  },
+  id: "5",
+  title: "Antes de diciembre",
+  price: "18.00",
+  descripcion: "Una novela juvenil romántica que narra la historia de amor y desafíos antes de diciembre.",
+  categoria: "Romance",
+  image: "assets/img/book-05.jpg"
+},
   {
     id: "6",
     title: "Los Juegos del Hambre",
     price: "14.99",
     descripcion: "Una historia de supervivencia en un mundo distópico, escrita por Suzanne Collins.",
     categoria: "Juvenil",
-    image: "assets/img/book-01.jpeg" 
+    image: "assets/img/book-06.jpg" 
   },
   {
     id: "7",
@@ -69,32 +69,33 @@ export class ListaProductosComponent  implements OnInit {
     price: "16.80",
     descripcion: "Una sátira sobre los libros de caballería escrita por Miguel de Cervantes.",
     categoria: "Clásico",
-    image: "assets/img/book-01.jpeg" 
+    image: "assets/img/book-07.jpg" 
   },
   {
-    id: "8",
-    title: "La Sombra del Viento",
-    price: "17.99",
-    descripcion: "Un thriller literario ambientado en la Barcelona de la posguerra, por Carlos Ruiz Zafón.",
-    categoria: "Misterio",
-    image: "assets/img/book-01.jpeg" 
-  },
+  id: "8",
+  title: "Nosotros en la luna",
+  price: "17.99",
+  descripcion: "Una novela romántica de Alice Kellen que relata la historia de Rhys y Ginger, dos desconocidos que se encuentran en París y mantienen una relación marcada por la distancia, las decisiones y los sentimientos.",
+  categoria: "Romance",
+  image: "assets/img/book-08.jpg"
+},
   {
-    id: "9",
-    title: "La Odisea",
-    price: "13.45",
-    descripcion: "La épica aventura de Odiseo, escrita por Homero.",
-    categoria: "Mitología",
-    image: "assets/img/book-01.jpeg" 
-  },
-  {
-    id: "10",
-    title: "Padre Rico, Padre Pobre",
-    price: "11.90",
-    descripcion: "Consejos financieros para lograr la libertad económica, por Robert Kiyosaki.",
-    categoria: "Finanzas",
-    image: "assets/img/book-01.jpeg" 
-  }
+  id: "9",
+  title: "Culpa mía",
+  price: "14.99",
+  descripcion: "Primera entrega de la trilogía Culpables de Mercedes Ron. Narra la intensa y conflictiva relación entre Noah y Nick, marcada por el amor, la pasión y los secretos familiares.",
+  categoria: "Romance",
+  image: "assets/img/book-09.jpg"
+},
+{
+  id: "10",
+  title: "El amor de mi otra vida",
+  price: "15.50",
+  descripcion: "Novela romántica de Brittainy C. Cherry que explora segundas oportunidades, emociones intensas y el poder transformador del amor verdadero.",
+  categoria: "Romance",
+  image: "assets/img/book-10.jpg"
+}
+
 ];
 
   
