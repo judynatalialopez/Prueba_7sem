@@ -13,87 +13,87 @@ export class ListaProductosComponent  implements OnInit {
 
   activo: boolean = false;
 
-  listaproductos: [
-  {
+  listaproductos: any[] = [
+    {
     id: "1",
     title: "Cien Años de Soledad",
     price: "18.99",
     descripcion: "Una obra maestra del realismo mágico escrita por Gabriel García Márquez.",
     categoria: "Ficción",
-    image: "https://m.media-amazon.com/images/I/81rEWmLXliL._UF1000,1000_QL80_.jpg" 
+    image: "assets/img/book-01.jpeg" 
 
   },
   {
     id: "2",
     title: "1984",
-    prince: "15.50",
-    descrpcion: "Una novela distópica sobre un futuro totalitario escrita por George Orwell.",
-    Categoria: "Ciencia Ficción",
-    image: "https://example.com/imagenes/1984.jpg"
+    price: "15.50",
+    descripcion: "Una novela distópica sobre un futuro totalitario escrita por George Orwell.",
+    categoria: "Ciencia Ficción",
+    image: "assets/img/book-01.jpeg" 
   },
   {
     id: "3",
     title: "El Principito",
-    prince: "10.99",
-    descrpcion: "Un cuento filosófico sobre la vida y el amor, escrito por Antoine de Saint-Exupéry.",
-    Categoria: "Infantil",
-    image: "https://example.com/imagenes/el-principito.jpg"
+    price: "10.99",
+    descripcion: "Un cuento filosófico sobre la vida y el amor, escrito por Antoine de Saint-Exupéry.",
+    categoria: "Infantil",
+    image: "assets/img/book-01.jpeg" 
   },
   {
     id: "4",
     title: "Orgullo y Prejuicio",
-    prince: "12.75",
-    descrpcion: "Una historia de amor y orgullo en la Inglaterra del siglo XIX, escrita por Jane Austen.",
-    Categoria: "Romance",
-    image: "https://example.com/imagenes/orgullo-prejuicio.jpg"
+    price: "12.75",
+    descripcion: "Una historia de amor y orgullo en la Inglaterra del siglo XIX, escrita por Jane Austen.",
+    categoria: "Romance",
+    image: "assets/img/book-01.jpeg" 
   },
   {
     id: "5",
     title: "Sapiens: De animales a dioses",
-    prince: "20.00",
-    descrpcion: "Una exploración de la historia de la humanidad por Yuval Noah Harari.",
-    Categoria: "Historia",
-    image: "https://example.com/imagenes/sapiens.jpg"
+    price: "20.00",
+    descripcion: "Una exploración de la historia de la humanidad por Yuval Noah Harari.",
+    categoria: "Historia",
+    image: "assets/img/book-01.jpeg" 
   },
   {
     id: "6",
     title: "Los Juegos del Hambre",
-    prince: "14.99",
-    descrpcion: "Una historia de supervivencia en un mundo distópico, escrita por Suzanne Collins.",
-    Categoria: "Juvenil",
-    image: "https://example.com/imagenes/juegos-hambre.jpg"
+    price: "14.99",
+    descripcion: "Una historia de supervivencia en un mundo distópico, escrita por Suzanne Collins.",
+    categoria: "Juvenil",
+    image: "assets/img/book-01.jpeg" 
   },
   {
     id: "7",
     title: "Don Quijote de la Mancha",
-    prince: "16.80",
-    descrpcion: "Una sátira sobre los libros de caballería escrita por Miguel de Cervantes.",
-    Categoria: "Clásico",
-    image: "https://example.com/imagenes/don-quijote.jpg"
+    price: "16.80",
+    descripcion: "Una sátira sobre los libros de caballería escrita por Miguel de Cervantes.",
+    categoria: "Clásico",
+    image: "assets/img/book-01.jpeg" 
   },
   {
     id: "8",
     title: "La Sombra del Viento",
-    prince: "17.99",
-    descrpcion: "Un thriller literario ambientado en la Barcelona de la posguerra, por Carlos Ruiz Zafón.",
-    Categoria: "Misterio",
-    image: "https://example.com/imagenes/sombra-viento.jpg"
+    price: "17.99",
+    descripcion: "Un thriller literario ambientado en la Barcelona de la posguerra, por Carlos Ruiz Zafón.",
+    categoria: "Misterio",
+    image: "assets/img/book-01.jpeg" 
   },
   {
     id: "9",
     title: "La Odisea",
-    prince: "13.45",
-    descrpcion: "La épica aventura de Odiseo, escrita por Homero.",
-    Categoria: "Mitología",
-    image: "https://example.com/imagenes/odisea.jpg"
+    price: "13.45",
+    descripcion: "La épica aventura de Odiseo, escrita por Homero.",
+    categoria: "Mitología",
+    image: "assets/img/book-01.jpeg" 
   },
   {
     id: "10",
     title: "Padre Rico, Padre Pobre",
-    prince: "11.90",
-    descrpcion: "Consejos financieros para lograr la libertad económica, por Robert Kiyosaki.",
-    Categoria: "Finanzas",
-    image: "https://example.com/imagenes/padre-rico.jpg"
+    price: "11.90",
+    descripcion: "Consejos financieros para lograr la libertad económica, por Robert Kiyosaki.",
+    categoria: "Finanzas",
+    image: "assets/img/book-01.jpeg" 
   }
 ];
 

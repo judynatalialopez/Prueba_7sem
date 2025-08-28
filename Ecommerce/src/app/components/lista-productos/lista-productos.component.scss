@@ -1,0 +1,18 @@
+.list-product {
+    background-color: white;
+    color: black;
+    .container {
+        width: max(100% - 400px);
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .content-grid-4 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+
+}

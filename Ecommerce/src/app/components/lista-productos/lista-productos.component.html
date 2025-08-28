@@ -1,26 +1,24 @@
-<div *ngIf="activo; else ContenidoElse">
-  MOSTRAR CONTENIDO
-</div>
-<h1>Lista Productos</h1>
-<div *ngFor="let producto of listaproductos">
-  <h1>producto</h1>
-  <img [src]="producto.image" alt="imagen"/>
-  <p>{{producto.title}}</p>
-</div>
+<section class="list-product">
 
-<ng-template #ContenidoElse>
-  No Mostrar Contenido ************************
-</ng-template>
+  <div *ngIf="activo; else ContenidoElse">
+    MOSTRAR CONTENIDO
+  </div>
 
-<ion-button (click)="cambiarValor()">Activar</ion-button>
-<br><br>
+  <ng-template #ContenidoElse>
+    NO MOSTRAR NADA
+  </ng-template>
 
-
-
-
-<h1>PERSONA</h1>
-<div *ngFor="let persona of listaObjetos" >
-  <h1>persona</h1>
-  <p> la nombre es: {{persona.nombre}}, Edad{{persona.edad}}</p>
-
-</div>
+  <ion-button (click)="cambiarValor()">Activar</ion-button>
+  <div class="content-info">
+    <h1>Lista Productos</h1>
+    <div class="content-grid-4">
+      <div *ngFor="let producto of listaproductos" class="card">
+        <h1>{{ producto.title }}</h1>
+        <img [src]="producto.image" alt="imagen" />
+        <p>{{ producto.descripcion }}</p>
+        <p>{{ producto.categoria }}</p>
+        <p><strong>Precio:</strong> {{ producto.price }}</p>
+      </div>
+    </div>
+  </div>
+</section>
