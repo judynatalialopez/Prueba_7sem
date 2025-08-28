@@ -14,7 +14,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonFooter, IonItem, IonLab
 export class InfoUsuarioPage implements OnInit {
 
   titulo: string ="informacion del usuario";
-  srcImage: string = "https://alfabetajuega.com/hero/2023/06/inosuke-hashibira-demon-slayer.jpg";
+  srcImage: string = "assets/img/icon-user.jpeg";
   
   nombre: string ="Judy";
   apellido: string ="Correa";
