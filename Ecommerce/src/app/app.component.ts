@@ -15,7 +15,8 @@ export class AppComponent {
   public appPages = [
     { title: 'User', url: '/info-usuario', icon: '<ion-icon name="contact"></ion-icon>' },
     { title: 'Home', url: '/home', icon: '<ion-icon name="contact"></ion-icon>' },
-    
+    { title: 'List', url: '/list', icon: '<ion-icon name="contact"></ion-icon>' },
+
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {
