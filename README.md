@@ -5,3 +5,5 @@ npm install
 
 Correr aplicacion: 
 ionic serve
+
+creacion de carpeta en page: ionic g page
