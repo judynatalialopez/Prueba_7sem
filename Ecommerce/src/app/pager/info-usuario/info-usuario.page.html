@@ -29,12 +29,12 @@
           <ion-item>
             <ion-label>{{direccion}}</ion-label>
           </ion-item>
-            <ion-button (click)="prueba()">Agregar</ion-button>
-
-            <ion-input [disabled]="activo" [(ngModel)]="dato">Imput</ion-input>
+          <div class="content-btn">
+            <ion-button (click)="prueba()" class="add">Agregar</ion-button>
+            <ion-input [disabled]="activo" [(ngModel)]="dato">Input</ion-input>
             <ion-button (click)="inactive()"></ion-button>
-            
-            <ion-button (click)="imprimir()">Imprimir</ion-button>
+            <ion-button (click)="imprimir()" class="print">Imprimir</ion-button>
+          </div>
         </div>
       </div>
     </div>
