@@ -1,7 +1,7 @@
 # Prueba_7sem
 
-Instalacion de dependencias
+Instalacion de dependencias: 
 npm install
 
-Correr aplicacion 
+Correr aplicacion: 
 ionic serve
