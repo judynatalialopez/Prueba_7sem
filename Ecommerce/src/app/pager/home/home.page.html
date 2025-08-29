@@ -14,11 +14,11 @@
 
         <h1>{{titulo}}</h1>
 
-        <input type="text" placeholder="Nombre" [(ngModel)]="usuario" name="usuario">
-        <input type="text" placeholder="Apellido" [(ngModel)]="direccion" name="direccion">
-        <input type="email" placeholder="Correo" [(ngModel)]="pais" name="pais">
-        <input type="text" placeholder="Teléfono" [(ngModel)]="idioma" name="idioma">
-        <input type="text" placeholder="Dirección" [(ngModel)]="moneda" name="moneda">
+        <input type="text" placeholder="Usuario" [(ngModel)]="usuario" name="usuario">
+        <input type="text" placeholder="Dirección de entrega" [(ngModel)]="direccion" name="direccion">
+        <input type="email" placeholder="País y ciudad del usuario" [(ngModel)]="pais" name="pais">
+        <input type="text" placeholder="Idioma" [(ngModel)]="idioma" name="idioma">
+        <input type="text" placeholder="Moneda" [(ngModel)]="moneda" name="moneda">
 
         <button (click)="imprimir()">Imprimir</button>
       </div>
