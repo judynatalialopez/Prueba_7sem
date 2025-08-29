@@ -5,9 +5,23 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <section class="practice-class">
+    <div class="container">
+      <div class="profile-info">
+        <div class="content-img">
+          <img src="12px" width="120px" [src]="logoImage" />
+        </div>
+
+        <h1>{{titulo}}</h1>
+
+        <input type="text" placeholder="Nombre" [(ngModel)]="usuario" name="usuario">
+        <input type="text" placeholder="Apellido" [(ngModel)]="direccion" name="direccion">
+        <input type="email" placeholder="Correo" [(ngModel)]="pais" name="pais">
+        <input type="text" placeholder="Teléfono" [(ngModel)]="idioma" name="idioma">
+        <input type="text" placeholder="Dirección" [(ngModel)]="moneda" name="moneda">
+
+        <button (click)="imprimir()">Imprimir</button>
+      </div>
+    </div>
+  </section>
 </ion-content>
