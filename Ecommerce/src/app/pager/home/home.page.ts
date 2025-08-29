@@ -14,7 +14,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/stan
 
 export class HomePage implements OnInit {
   
-  titulo: string ="Bookshop";
+  titulo: string ="Library";
   logoImage: string = "assets/img/logo.jpeg";
 
 
