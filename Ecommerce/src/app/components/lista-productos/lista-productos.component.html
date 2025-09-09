@@ -1,7 +1,8 @@
 <section class="list-product">
   <div class="container">
 
-    <div class="content-btn-top">
+    
+    <!--<div class="content-btn-top">
       <div *ngIf="activo; else ContenidoElse" class="active">
         MOSTRAR CONTENIDO
       </div>
@@ -9,13 +10,14 @@
       <ng-template #ContenidoElse>
         NO MOSTRAR NADA
       </ng-template>
-    </div>
+    </div>-->
 
-    <ion-button (click)="cambiarValor()">Activar</ion-button>
+
+  <!--<ion-button (click)="cambiarValor()">Activar</ion-button>-->
     <div class="content-info">
       <h1>Lista Productos</h1>
       <div class="content-grid-4">
-        <div *ngFor="let producto of listaproductos" class="card">
+        <div *ngFor="let producto of valorEntradaPadre" class="card">
           <h3>{{ producto.title }}</h3>
           <div class="content-img">
             <img [src]="producto.image" alt="imagen" />
@@ -29,4 +31,7 @@
       </div>
     </div>
   </div>
+
+
+
 </section>
