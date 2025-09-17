@@ -17,6 +17,7 @@ export class AppComponent {
     { title: 'Home', url: '/home', icon: '<ion-icon name="contact"></ion-icon>' },
     { title: 'List', url: '/list', icon: '<ion-icon name="contact"></ion-icon>' },
     { title: 'Categoria', url: '/categoria', icon: '<ion-icon name="contact"></ion-icon>' },
+    { title: 'Crear Producto', url: '/crear-listar-producto', icon: '<ion-icon name="contact"></ion-icon>' },
 
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];

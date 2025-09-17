@@ -26,6 +26,10 @@ export const routes: Routes = [
     path: 'categoria',
     loadComponent: () => import('./pager/categoria/categoria.page').then( m => m.CategoriaPage)
   },
+  {
+    path: 'crear-listar-producto',
+    loadComponent: () => import('./pager/crear-listar-producto/crear-listar-producto.page').then( m => m.CrearListarProductoPage)
+  },
 
   
 

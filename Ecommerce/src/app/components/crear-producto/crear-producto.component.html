@@ -1,0 +1,17 @@
+
+
+  <section class="practice-class">
+    <div class="container">
+
+        <h1>{{titulo}}</h1>
+
+  <input type="text" placeholder="Digite id" [(ngModel)]="productos.id" name="id">
+  <input type="text" placeholder="Digite el título" [(ngModel)]="productos.title" name="title">
+  <input type="number" placeholder="Digite el precio" [(ngModel)]="productos.price" name="price">
+  <input type="text" placeholder="Digite la descripción" [(ngModel)]="productos.descripcion" name="descripcion">
+  <input type="text" placeholder="Digite la categoría" [(ngModel)]="productos.categoria" name="categoria">
+  <input type="text" placeholder="Imagen (URL)" [(ngModel)]="productos.image" name="image">
+
+  <button (click)="crearProduct()">Crear Productos</button>
+      </div>
+  </section>
