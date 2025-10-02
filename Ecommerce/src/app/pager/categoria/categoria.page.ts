@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { ListaProductosComponent } from 'src/app/components/lista-productos/lista-productos.component';
 import { producto } from 'src/app/data/interfaces-model/producto.model';
+import { ProductoService } from 'src/app/data/services/producto-service';
 
 
 @Component({
@@ -16,7 +17,7 @@ import { producto } from 'src/app/data/interfaces-model/producto.model';
 export class CategoriaPage implements OnInit {
 
   //variableEnviarHijo: string = "soy el padre"
-
+  
   ListaProductos: producto[] = [
     {
       id: 1,
@@ -102,7 +103,11 @@ export class CategoriaPage implements OnInit {
   ];
   constructor() { }
 
+  listarproducto: producto[] = [];
+  productoService = inject(ProductoService)
+
   ngOnInit() {
+    this.listarproducto = this.productoService.listarproducto
   }
 
 }

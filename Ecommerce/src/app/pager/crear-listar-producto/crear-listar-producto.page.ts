@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {
@@ -10,6 +10,8 @@ import {
 import { producto } from 'src/app/data/interfaces-model/producto.model';
 import { CrearProductoComponent } from 'src/app/components/crear-producto/crear-producto.component';
 import { ListaProductosComponent } from 'src/app/components/lista-productos/lista-productos.component';
+import { ProductoService } from 'src/app/data/services/producto-service';
+
 
 
 @Component({
@@ -31,14 +33,21 @@ export class CrearListarProductoPage implements OnInit {
   
   listarproducto: producto[] = [];
 
+  productoService = inject(ProductoService)
+
+  guardarSerervicio(){
+    //this.productoService.GruardarDato(this.dato)
+  }
+
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.listarproducto = this.productoService.listarproducto
+  }
 
   listproduct(productos: producto) {
     console.log('Se recibió el producto:', productos);
 
-    this.listarproducto.push(productos);
-    
+    this.productoService.guardarlista(productos);
   }
 }

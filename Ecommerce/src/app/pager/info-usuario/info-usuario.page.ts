@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonFooter, IonItem, IonLabel, IonButton, IonInput } from '@ionic/angular/standalone';
+//import { ProductoService } from 'src/app/data/services/producto-service';
 
 @Component({
   selector: 'app-info-usuario',
@@ -23,6 +24,13 @@ export class InfoUsuarioPage implements OnInit {
   direccion: string ="Carrera tata";
   activo: boolean = false;
   dato: string;
+
+  
+  //0productoService = inject(ProductoService)
+
+  //guardarSerervicio(){
+    //this.productoService.GruardarDato(this.dato)
+  //}
 
   prueba(){
     alert("se agrego")

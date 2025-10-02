@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { ProductoService } from 'src/app/data/services/producto-service';
 
 
 @Component({
@@ -17,6 +18,9 @@ export class HomePage implements OnInit {
   titulo: string ="Library";
   logoImage: string = "assets/img/logo.jpeg";
 
+
+  productoService = inject(ProductoService)
+  datoObtenido: string = ""
 
   usuario: string = '';
   direccion: string = '';
@@ -36,6 +40,8 @@ export class HomePage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
+    //this.datoObtenido = this.productoService.datoguardado
   }
 
 }
