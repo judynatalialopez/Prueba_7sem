@@ -18,9 +18,10 @@ export const routes: Routes = [
   {
     path: 'home',
     loadComponent: () => import('./pager/home/home.page').then( m => m.HomePage)
-  },  {
+  },
+  {
     path: 'list',
-    loadComponent: () => import('./pager/list/list.page').then( m => m.ListPage)
+    loadComponent: () => import('./pager/carrito-compras/carrito-compras.page').then( m => m.CarritoComprasPage)
   },
   {
     path: 'categoria',
@@ -29,6 +30,10 @@ export const routes: Routes = [
   {
     path: 'crear-listar-producto',
     loadComponent: () => import('./pager/crear-listar-producto/crear-listar-producto.page').then( m => m.CrearListarProductoPage)
+  },
+  {
+    path: 'carrito-compras',
+    loadComponent: () => import('./pager/carrito-compras/carrito-compras.page').then( m => m.CarritoComprasPage)
   },
 
   

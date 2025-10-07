@@ -15,4 +15,14 @@ export class ProductoService {
     guardarlista(productos: producto){
       this.listarproducto.push(productos);
     }
+
+
+    ListarCompraProducto: producto[] = []
+    CompararProduct(producto: producto) {
+    this.ListarCompraProducto.push(producto);
+
+  }
+EliminarProductoDelCarrito(id: number) {
+  this.ListarCompraProducto = this.ListarCompraProducto.filter(p => p.id !== id);
+}
 }

@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, EventEmitter, OnInit, Output, inject  } from '@angular/core';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton } from '@ionic/angular/standalone';
 import { producto } from 'src/app/data/interfaces-model/producto.model';
+import { ProductoService } from 'src/app/data/services/producto-service';
 
 @Component({
   selector: 'app-lista-productos',
@@ -12,38 +13,58 @@ import { producto } from 'src/app/data/interfaces-model/producto.model';
 })
 export class ListaProductosComponent implements OnInit {
 
-  activo: boolean = false;
- 
+  productoService = inject(ProductoService)
 
-  //listaObjetos = [
-    //{
-      //nombre: "Camilo",
-      //edad: 15
-    //},
-    //{
-      //nombre: "Samuel",
-      //edad: 16
-    //},
-    //{
-      //nombre: "Liam",
-      //edad: 20
-    //}
-  //]
+  titulo: string = 'Agregar Producto';
+  activo: boolean = false;
+
+ productos: producto = {
+    id: 0,
+    title: '',
+    price: 0,
+    descripcion: '',
+    categoria: '',
+    image: '',
+  };
+
+  
+   @Output() agregarproducto = new EventEmitter<producto>();
+ CompraProduct(producto: producto){ 
+  if (this.estaEnCarrito(producto)) {
+    
+    this.productoService.EliminarProductoDelCarrito(producto.id);
+    console.log("Producto eliminado del carrito:", producto);
+
+    this.valorEntradaPadre = this.valorEntradaPadre.filter(p => p.id !== producto.id);
+  } 
+  else
+     {
+    this.productoService.CompararProduct(producto);
+    console.log("Producto agregado al carrito:", producto);
+  
+}
+
+  
+}
+estaEnCarrito(producto: producto): boolean {
+  return this.productoService.ListarCompraProducto.some(p => p.id === producto.id);
+}
+
+
 
   constructor() { }
 
   ngOnInit() { }
 
+  
   @Input()  valorEntradaPadre: producto[];
+  
 
   cambiarValor() {
-    //this. producto = {
-    //id: 1,
-    //precio: 12000
-    //}
-
-    this.activo = !this.activo;
+     this.activo = !this.activo;
   }
+  
+  
 
 }
 

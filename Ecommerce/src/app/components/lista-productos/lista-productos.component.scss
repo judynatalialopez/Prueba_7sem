@@ -32,8 +32,8 @@ p {
         ion-button.md.button.button-solid.ion-activatable.ion-focusable.hydrated {
             --background: #F8BBD1 !important;
         }
-        
-        .active{
+
+        .active {
             margin-bottom: 20px;
             color: #212121 !important;
         }
@@ -93,6 +93,38 @@ p {
                 line-height: 160%;
             }
         }
+
+        button {
+            width: 100%;
+            padding: 10px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #fff;
+        }
+
+        button:not(.eliminar) {
+            background-color: #007bff;
+        }
+
+        button:not(.eliminar):hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        button.eliminar {
+            background-color: #e74c3c;
+        }
+
+        button.eliminar:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
+
     }
 }
 

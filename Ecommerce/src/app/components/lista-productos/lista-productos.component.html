@@ -1,7 +1,7 @@
 <section class="list-product">
   <div class="container">
 
-    
+
     <!--<div class="content-btn-top">
       <div *ngIf="activo; else ContenidoElse" class="active">
         MOSTRAR CONTENIDO
@@ -13,7 +13,7 @@
     </div>-->
 
 
-  <!--<ion-button (click)="cambiarValor()">Activar</ion-button>-->
+    <!--<ion-button (click)="cambiarValor()">Activar</ion-button>-->
     <div class="content-info">
       <div class="content-grid-4">
         <div *ngFor="let producto of valorEntradaPadre" class="card">
@@ -25,7 +25,14 @@
             <p>{{ producto.descripcion }}</p>
             <p><strong>Categoria:</strong> {{ producto.categoria }}</p>
             <p><strong>Precio:</strong> {{ producto.price }}</p>
+            <button [class.eliminar]="estaEnCarrito(producto)" (click)="CompraProduct(producto)">
+              {{ estaEnCarrito(producto) ? 'Eliminar' : 'Comprar' }}
+            </button>
+
+
+
           </div>
+
         </div>
       </div>
     </div>
