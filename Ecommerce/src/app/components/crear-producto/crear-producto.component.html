@@ -4,14 +4,34 @@
     <div class="container">
 
         <h1>{{titulo}}</h1>
+        <form [formGroup]="productreactive" (ngSubmit)="guardarform()">
+        <ion-input class="input" formControlName="id" type="number" placeholder="ID">Id</ion-input>
+        <label class="error" *ngIf="productreactive.get('id')?.touched && productreactive.get('id')?.invalid">Máximo 3 dígitos</label>
+        <ion-input class="input" formControlName="title">Titulo</ion-input>
+        <label class="error" *ngIf="productreactive.get('title')?.touched && productreactive.get('title')?.invalid">Máximo de 15 dígitos</label>
+        <ion-input class="input" formControlName="price" type="number">Presio</ion-input>
+        <label class="error" *ngIf="productreactive.get('price')?.touched && productreactive.get('price')?.invalid">Maximo de 7 digitos</label>
+        <ion-input class="input" formControlName="descripcion">Descripcion</ion-input>
+        <label class="error" *ngIf="productreactive.get('descripcion')?.touched && productreactive.get('descripcion')?.invalid">Máximo 30 digitos</label>
+        <ion-input class="input" formControlName="categoria">Categoria</ion-input>
+        <label class="error" *ngIf="productreactive.get('categoria')?.touched && productreactive.get('categoria')?.invalid">Máximo 10 digitos</label>
+        <ion-input class="input" formControlName="image">URL imagen </ion-input>
+        <label class="error" *ngIf="productreactive.get('image')?.touched && productreactive.get('image')?.invalid">No es una URL</label>
+        <br>
+       <ion-button class="button" type="submit" [disabled]="productreactive.invalid"> Crear Producto</ion-button>
+      </form>
 
-  <input type="text" placeholder="Digite id" [(ngModel)]="productos.id" name="id">
+  <!-- <input type="text" placeholder="Digite id" [(ngModel)]="productos.id" name="id">
   <input type="text" placeholder="Digite el título" [(ngModel)]="productos.title" name="title">
   <input type="number" placeholder="Digite el precio" [(ngModel)]="productos.price" name="price">
   <input type="text" placeholder="Digite la descripción" [(ngModel)]="productos.descripcion" name="descripcion">
   <input type="text" placeholder="Digite la categoría" [(ngModel)]="productos.categoria" name="categoria">
   <input type="text" placeholder="Imagen (URL)" [(ngModel)]="productos.image" name="image">
 
-  <button (click)="crearProduct()">Crear Productos</button>
-      </div>
-  </section>
+  <button (click)="crearProduct()">Crear Productos</button> -->
+      <!-- </div> 
+
+  </section> -->
+<!-- <ion-content [fullscreen]="true">
+  
+</ion-content> -->
