@@ -52,23 +52,19 @@ export class CrearProductoComponent implements OnInit {
     })
   }  
 
-  guardarform(){
-    console.log('formulario', this.productreactive);
-  }
+  
   crearProduct() {
-    console.log('Enviando producto creado:', this.productos);
+     if (this.productreactive.valid) {
+    const nuevoProducto: producto = this.productreactive.value;
+    console.log('Enviando producto creado:', nuevoProducto);
 
-    const nuevoProducto = { ...this.productos };
     this.crearproductos.emit(nuevoProducto);
 
-    this.productos = {
-      id: 0,
-      title: '',
-      price: 0,
-      descripcion: '',
-      categoria: '',
-      image: '',
-    };
+    this.productreactive.reset();
+  } else {
+    console.log('Formulario inválido');
+    this.productreactive.markAllAsTouched();
+  }
   }
 
   constructor() {}
