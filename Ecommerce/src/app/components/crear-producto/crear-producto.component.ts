@@ -11,18 +11,7 @@ import { CommonModule } from '@angular/common';
   templateUrl:  './crear-producto.component.html',
   styleUrls: ['./crear-producto.component.scss'],
   standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    FormsModule,
-    IonContent,
-    IonButton,
-    IonInput,
-    IonCard,
-    IonCardHeader,
-    IonCardTitle,
-    IonCardContent,
-    CommonModule
-],
+  imports: [ ReactiveFormsModule, FormsModule, IonContent, IonButton, IonInput, IonCard, IonCardHeader, IonCardTitle, IonCardContent, CommonModule],
 })
 
 export class CrearProductoComponent implements OnInit {
@@ -48,16 +37,16 @@ export class CrearProductoComponent implements OnInit {
       price: ['', [Validators.required, Validators.pattern(/^\d{1,7}$/)]],
       descripcion: ['', [Validators.required, Validators.maxLength(20)]],
       categoria: ['', [Validators.required, Validators.maxLength(10)]],
-      image: ['', [Validators.required,   Validators.pattern(/(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg|webp))$/i)]],
+      image: ['', [Validators.required,   Validators.pattern(/(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg|web))$/i)]],
     })
   }  
 
-  
   crearProduct() {
-     if (this.productreactive.valid) {
+  if (this.productreactive.valid) {
     const nuevoProducto: producto = this.productreactive.value;
     console.log('Enviando producto creado:', nuevoProducto);
 
+    
     this.crearproductos.emit(nuevoProducto);
 
     this.productreactive.reset();
@@ -65,7 +54,8 @@ export class CrearProductoComponent implements OnInit {
     console.log('Formulario inválido');
     this.productreactive.markAllAsTouched();
   }
-  }
+}
+
 
   constructor() {}
 

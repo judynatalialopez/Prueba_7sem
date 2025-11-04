@@ -6,7 +6,6 @@ import { ListaProductosComponent } from 'src/app/components/lista-productos/list
 import { producto } from 'src/app/data/interfaces-model/producto.model';
 import { ProductoService } from 'src/app/data/services/producto-service';
 
-
 @Component({
   selector: 'app-categoria',
   templateUrl: './categoria.page.html',
@@ -15,9 +14,6 @@ import { ProductoService } from 'src/app/data/services/producto-service';
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, ListaProductosComponent]
 })
 export class CategoriaPage implements OnInit {
-
-  //variableEnviarHijo: string = "soy el padre"
-  
   ListaProductos: producto[] = [
     {
       id: 1,
@@ -79,7 +75,7 @@ export class CategoriaPage implements OnInit {
       id: 8,
       title: "Nosotros en la luna",
       price: 17.99,
-      descripcion: "Una novela romántica de Alice Kellen que relata la historia de Rhys y Ginger, dos desconocidos que se encuentran en París y mantienen una relación marcada por la distancia, las decisiones y los sentimientos.",
+      descripcion: "Una novela romántica de Alice Kellen que relata la historia de Rhys y Ginger.",
       categoria: "Romance",
       image: "assets/img/book-08.jpg"
     },
@@ -87,7 +83,7 @@ export class CategoriaPage implements OnInit {
       id: 9,
       title: "Culpa mía",
       price: 14.99,
-      descripcion: "Primera entrega de la trilogía Culpables de Mercedes Ron. Narra la intensa y conflictiva relación entre Noah y Nick, marcada por el amor, la pasión y los secretos familiares.",
+      descripcion: "Primera entrega de la trilogía Culpables. Narra la intensa y conflictiva relación entre Noah y Nick.",
       categoria: "Romance",
       image: "assets/img/book-09.jpg"
     },
@@ -99,15 +95,18 @@ export class CategoriaPage implements OnInit {
       categoria: "Romance",
       image: "assets/img/book-10.jpg"
     }
-
   ];
-  constructor() { }
 
   listarproducto: producto[] = [];
-  productoService = inject(ProductoService)
+  productoService = inject(ProductoService);
+
+  constructor() {}
 
   ngOnInit() {
-    this.listarproducto = this.productoService.listarproducto
+    this.listarproducto = this.productoService.listarproducto;
   }
 
+  get todosLosProductos(): producto[] {
+    return [...this.ListaProductos, ...this.listarproducto];
+  }
 }

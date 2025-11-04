@@ -17,11 +17,11 @@ export class InfoUsuarioPage implements OnInit {
   titulo: string ="informacion del usuario";
   srcImage: string = "assets/img/icon-user.jpeg";
   
-  nombre: string ="Judy";
-  apellido: string ="Correa";
-  email: string ="nat@email.com";
-  telefono: string ="320 000 0000";
-  direccion: string ="Carrera tata";
+  nombre: string ="Judy Natalia";
+  apellido: string ="Correa Lopez";
+  email: string ="natisjcl02@fmail.com";
+  telefono: string ="323 973 9884";
+  direccion: string ="Carrera Ingenieria De Software";
   activo: boolean = false;
   dato: string;
 

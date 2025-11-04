@@ -4,5 +4,7 @@ export interface producto{
     price: number,
     descripcion: string,
     categoria: string,
-    image: string
+    image: string,
+    mostrarMas?: boolean; 
+
 }
