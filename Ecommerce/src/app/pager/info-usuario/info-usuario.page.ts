@@ -32,13 +32,6 @@ export class InfoUsuarioPage implements OnInit {
     //this.productoService.GruardarDato(this.dato)
   //}
 
-  prueba(){
-    alert("se agrego")
-    this.srcImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPNf8dMz_hRVLLxUw9U-mcyxO9BOyR4vftrA&s"
-  }
-  inactive(){
-    this.activo = true; 
-  }
 
   imprimir(){
     alert(this.dato)
