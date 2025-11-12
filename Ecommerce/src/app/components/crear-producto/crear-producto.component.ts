@@ -40,22 +40,24 @@ export class CrearProductoComponent implements OnInit {
       image: ['', [Validators.required,   Validators.pattern(/(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg|web))$/i)]],
     })
   }  
-
-  crearProduct() {
+ crearproduct() {
   if (this.productreactive.valid) {
-    const nuevoProducto: producto = this.productreactive.value;
-    console.log('Enviando producto creado:', nuevoProducto);
+    const nuevoProducto: producto = {
+      id: this.productreactive.get('id')?.value,
+      title: this.productreactive.get('title')?.value,
+      price: this.productreactive.get('price')?.value,
+      descripcion: this.productreactive.get('descripcion')?.value,
+      categoria: this.productreactive.get('categoria')?.value,
+      image: this.productreactive.get('image')?.value,
+    };
 
-    
     this.crearproductos.emit(nuevoProducto);
 
     this.productreactive.reset();
   } else {
-    console.log('Formulario inválido');
-    this.productreactive.markAllAsTouched();
+    alert('No se puede crear producto');
   }
 }
-
 
   constructor() {}
 

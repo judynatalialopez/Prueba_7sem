@@ -4,20 +4,20 @@
     <div class="container">
 
         <h1>{{titulo}}</h1>
-        <form [formGroup]="productreactive" (ngSubmit)="crearProduct()">
-        <ion-input class="input" formControlName="id" type="number" placeholder="ID">HH</ion-input>
+        <form [formGroup]="productreactive" (ngSubmit)="crearproduct()">
+        <ion-input class="input" formControlName="id" type="number" placeholder="Id"></ion-input>
         <label class="error" *ngIf="productreactive.get('id')?.touched && productreactive.get('id')?.invalid">Máximo 3 dígitos</label>
-        <ion-input class="input" formControlName="title" placeholder="TITULO"></ion-input>
+        <ion-input class="input" formControlName="title" placeholder="Titulo"></ion-input>
         <label class="error" *ngIf="productreactive.get('title')?.touched && productreactive.get('title')?.invalid">Máximo de 15 dígitos</label>
-        <ion-input class="input" formControlName="price" type="number"placeholder="PRESIO"></ion-input>
+        <ion-input class="input" formControlName="price" type="number"placeholder="Presio"></ion-input>
         <label class="error" *ngIf="productreactive.get('price')?.touched && productreactive.get('price')?.invalid">Maximo de 7 digitos</label>
         <ion-input class="input" formControlName="descripcion" placeholder="Descripcion"></ion-input>
         <label class="error" *ngIf="productreactive.get('descripcion')?.touched && productreactive.get('descripcion')?.invalid">Máximo 30 digitos</label>
         <ion-input class="input" formControlName="categoria" placeholder="Categoria"></ion-input>
         <label class="error" *ngIf="productreactive.get('categoria')?.touched && productreactive.get('categoria')?.invalid">Máximo 10 digitos</label>
-        <ion-input class="input" formControlName="image" placeholder="imagen"></ion-input>
+        <ion-input class="input" formControlName="image" placeholder="Imagen"></ion-input>
         <label class="error" *ngIf="productreactive.get('image')?.touched && productreactive.get('image')?.invalid">No es una URL</label>
         <br>
-       <ion-button class="button" type="submit" [disabled]="productreactive.invalid"> Crear Producto</ion-button>
+       <ion-button class="button" type="submit" [disabled]="productreactive.invalid"> Crear</ion-button>
        
       </form>

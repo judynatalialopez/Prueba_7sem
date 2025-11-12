@@ -15,19 +15,23 @@ export class ListaProductosComponent implements OnInit {
   productoService = inject(ProductoService);
 
   titulo: string = 'Agregar Producto';
-  activo: boolean = false;
-
-  productos: producto = {
-    id: 0,
-    title: '',
-    price: 0,
-    descripcion: '',
-    categoria: '',
-    image: '',
-  };
-
+  
   @Output() agregarproducto = new EventEmitter<producto>();
-  CompraProduct(producto: producto) {
+  @Input() encarrito: boolean = false;
+  
+agregadoCarrito(producto: producto) {
+  alert("Se agregó el producto al carrito");
+  this.productoService.CompararProduct(producto);
+}
+
+  
+ 
+  eliminadoCarrito(index){
+    alert("se elimino elproducto");
+    this.productoService.EliminarProductoDelCarrito(index);
+  }
+
+  /*CompraProduct(producto: producto) {
   if (this.estaEnCarrito(producto)) {
     this.productoService.EliminarProductoDelCarrito(producto.id);
     console.log('Producto eliminado del carrito:', producto);
@@ -43,7 +47,7 @@ estaEnCarrito(producto: producto): boolean {
   );
   
 }
-@Input() modo: 'categoria' | 'carrito' = 'categoria';
+@Input() modo: 'categoria' | 'carrito' = 'categoria';*/
 
 
   constructor() {}
@@ -52,7 +56,5 @@ estaEnCarrito(producto: producto): boolean {
 
   @Input() valorEntradaPadre: producto[];
 
-  cambiarValor() {
-    this.activo = !this.activo;
-  }
+  
 }

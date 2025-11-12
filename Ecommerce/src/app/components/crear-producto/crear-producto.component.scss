@@ -38,7 +38,7 @@
 
   h1 {
     text-transform: uppercase;
-    color: #F8BBD0;
+    color: #ef9eba;
     font-size: 36px;
     text-align: center;
   }
@@ -109,7 +109,7 @@
     --color: #212121;
     font-size: 16px;
     border-radius: 25px;
-    border: 5px solid #525d64b2;
+    border: 5px solid rgb(82 93 100 / 0%);
     overflow: hidden;
 
 
@@ -135,6 +135,16 @@
     margin-top: 4px;
     display: block;
   }
+  .button {
+  --color: #fff;         
+  --border-radius: 12px;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  margin: center; 
+}
+
 }
 
 img {
