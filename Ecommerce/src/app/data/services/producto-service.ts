@@ -1,28 +1,38 @@
-import { Injectable } from '@angular/core';
+import {  inject,Injectable } from '@angular/core';
 import { producto } from '../interfaces-model/producto.model';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductoService {
-  /*datoguardado: string=""
-  listalTexto: string[] = []
 
-  GruardarDato(dato: string){
-    this.listalTexto.push(dato)
-  }*/
-    listarproducto: producto[] = []
-    guardarlista(productos: producto){
-      this.listarproducto.push(productos);
-    }
+   private http = inject(HttpClient)
+  apiUrl = "https://fakestoreapi.com/products"
+ 
+  listarproducto: producto[] = [];
 
-
-    ListarCompraProducto: producto[] = []
-    CompararProduct(producto: producto) {
-    this.ListarCompraProducto.push(producto);
-
+  obtenerproducto(){
+    return this.listarproducto
   }
-EliminarProductoDelCarrito(id: number) {
-  this.ListarCompraProducto = this.ListarCompraProducto.filter(p => p.id !== id);
-}
+  guardarlista(productos: producto) {
+    this.listarproducto.push(productos);
+  }
+
+  ListarCompraProducto: producto[] = [];
+  CompararProduct(producto: producto) {
+    this.ListarCompraProducto.push(producto);
+  }
+  EliminarProductoDelCarrito(productos) {
+    this.ListarCompraProducto.splice(productos, 1);
+  }
+
+   getProductos(): Observable<producto[]> {
+    return this.http.get<producto[]>(this.apiUrl);
+  }
+
+   crearProducto(data: producto): Observable<producto> {
+    return this.http.post<producto>(this.apiUrl, data);
+  }
 }

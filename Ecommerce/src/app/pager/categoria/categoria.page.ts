@@ -43,14 +43,26 @@ export class CategoriaPage implements OnInit {
 
   listarproducto: producto[] = [];
   productoService = inject(ProductoService);
+  listaConProductosAPI: producto[] = []
+  listaSinProductos: producto[] = [];
+
 
   constructor() {}
 
   ngOnInit() {
-    this.listarproducto = this.productoService.listarproducto;
+    this.productoAPI();
+    this.listaSinProductos = this.productoService.obtenerproducto();
   }
 
-  get todosLosProductos(): producto[] {
-    return [...this.ListaProductos, ...this.listarproducto];
+  productoAPI() {
+    this.productoService.getProductos().subscribe({
+      next: (data) => {
+        this.listarproducto = data;
+      },
+      error: (error) => {
+        console.error('error:', error);
+      }
+    });
   }
+ 
 }

@@ -22,10 +22,18 @@ export class CrearListarProductoPage implements OnInit {
 
   productoService = inject(ProductoService)
 
-  guardarSerervicio(){
-    //this.productoService.GruardarDato(this.dato)
+  guardarproducto(producto: producto) {
+    alert("Producto creado correctamente");
+    this.productoService.guardarlista(producto)
+    this.crearProducto(producto);
   }
-
+  crearProducto(prod: producto) {
+  this.productoService.crearProducto(prod).subscribe({
+    next: (data) => {
+      this.listarproducto.push(data); 
+    }
+  });
+}
   constructor() {}
 
   ngOnInit() {
