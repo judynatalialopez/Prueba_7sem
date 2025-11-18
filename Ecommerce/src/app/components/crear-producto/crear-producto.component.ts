@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 
 export class CrearProductoComponent implements OnInit {
   titulo: string = 'Crear Producto'; 
+  logoImage: string = "assets/img/icon-product.jpg";
   productos: producto = {
     id: 0,
     title: '',

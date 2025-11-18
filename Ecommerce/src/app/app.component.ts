@@ -13,8 +13,8 @@ import { mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutlin
 })
 export class AppComponent {
   public appPages = [
-    { title: 'User', url: '/info-usuario', icon: '<ion-icon name="contact"></ion-icon>' },
-    { title: 'Home', url: '/home', icon: '<ion-icon name="contact"></ion-icon>' },
+    { title: 'Usuario', url: '/info-usuario', icon: '<ion-icon name="contact"></ion-icon>' },
+    { title: 'Inicio', url: '/home', icon: '<ion-icon name="contact"></ion-icon>' },
     { title: 'Carrito Compras', url: '/carrito-compras', icon: '<ion-icon name="contact"></ion-icon>' },
     { title: 'Categoria', url: '/categoria', icon: '<ion-icon name="contact"></ion-icon>' },
     { title: 'Crear Producto', url: '/crear-listar-producto', icon: '<ion-icon name="contact"></ion-icon>' },

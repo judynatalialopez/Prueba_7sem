@@ -4,6 +4,11 @@
     <div class="container">
 
         <h1>{{titulo}}</h1>
+        <div class="profile-info">
+        <div class="content-img">
+          <img src="12px" width="120px" [src]="logoImage" />
+        </div>
+        
         <form [formGroup]="productreactive" (ngSubmit)="crearproduct()">
         <ion-input class="input" formControlName="id" type="number" placeholder="Id"></ion-input>
         <label class="error" *ngIf="productreactive.get('id')?.touched && productreactive.get('id')?.invalid">Máximo 3 dígitos</label>

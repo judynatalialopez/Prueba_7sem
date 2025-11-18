@@ -40,8 +40,7 @@ export class HomePage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
-    //this.datoObtenido = this.productoService.datoguardado
+   
   }
 
 }

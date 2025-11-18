@@ -15,7 +15,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonFooter, IonItem, IonLab
 export class InfoUsuarioPage implements OnInit {
 
   titulo: string ="informacion del usuario";
-  srcImage: string = "assets/img/icon-user.jpeg";
+  srcImage: string = "assets/img/icon-user.jpg";
   
   nombre: string ="Judy Natalia";
   apellido: string ="Correa Lopez";
@@ -24,13 +24,6 @@ export class InfoUsuarioPage implements OnInit {
   direccion: string ="Carrera Ingenieria De Software";
   activo: boolean = false;
   dato: string;
-
-  
-  //0productoService = inject(ProductoService)
-
-  //guardarSerervicio(){
-    //this.productoService.GruardarDato(this.dato)
-  //}
 
 
   imprimir(){

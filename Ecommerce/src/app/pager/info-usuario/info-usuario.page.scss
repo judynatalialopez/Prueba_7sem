@@ -17,7 +17,7 @@
         justify-content: center;
         gap: 40px;
 
-        background: rgba(33, 33, 33, 0.19);
+        background: rgb(121, 204, 203);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
 
@@ -38,7 +38,8 @@
 
     h1 {
         text-transform: uppercase;
-        color: #F8BBD0;
+        color: #000000;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 36px;
         text-align: center;
     }
@@ -84,7 +85,6 @@
                 --background: initial;
                 padding: 0;
                 transition: padding 900ms ease;
-                //--border-style: initial;
             }
 
             .content-btn {
@@ -94,7 +94,7 @@
 
                 .add, .print {
                     margin-top: 20px;
-                    --background: #F8BBD1 !important;
+                    --background: #000000 !important;
                     color: #ffffff !important;
                 }
             }
