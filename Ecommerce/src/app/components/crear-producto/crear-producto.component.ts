@@ -38,7 +38,7 @@ export class CrearProductoComponent implements OnInit {
       price: ['', [Validators.required, Validators.pattern(/^\d{1,7}$/)]],
       descripcion: ['', [Validators.required, Validators.maxLength(20)]],
       categoria: ['', [Validators.required, Validators.maxLength(10)]],
-      image: ['', [Validators.required,   Validators.pattern(/(https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg|web))$/i)]],
+      image: ['', [Validators.required,   Validators.pattern(/^https?:\/\/.+/i)]],
     })
   }  
  crearproduct() {
