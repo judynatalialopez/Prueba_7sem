@@ -27,7 +27,7 @@ agregadoCarrito(producto: producto) {
 }
  
   eliminadoCarrito(index){
-    alert("se elimino elproducto");
+    alert("se elimino el producto");
     this.productoService.EliminarProductoDelCarrito(index);
   }
 
