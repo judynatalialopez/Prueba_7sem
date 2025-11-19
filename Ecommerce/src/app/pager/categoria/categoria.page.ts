@@ -14,32 +14,7 @@ import { ProductoService } from 'src/app/data/services/producto-service';
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, ListaProductosComponent]
 })
 export class CategoriaPage implements OnInit {
-  ListaProductos: producto[] = [
-    {
-      id: 1,
-      title: "Cien Años de Soledad",
-      price: 18.99,
-      descripcion: "Una obra maestra del realismo mágico escrita por Gabriel García Márquez.",
-      categoria: "Ficción",
-      image: "assets/img/book-01.jpeg"
-    },
-    {
-      id: 2,
-      title: "1984",
-      price: 15.50,
-      descripcion: "Una novela distópica sobre un futuro totalitario escrita por George Orwell.",
-      categoria: "Ciencia Ficción",
-      image: "assets/img/book-02.jpg"
-    },
-    {
-      id: 3,
-      title: "El Principito",
-      price: 10.99,
-      descripcion: "Un cuento filosófico sobre la vida y el amor, escrito por Antoine de Saint-Exupéry.",
-      categoria: "Infantil",
-      image: "assets/img/book-03.jpg"
-    }
-  ];
+ 
 
   listarproducto: producto[] = [];
   productoService = inject(ProductoService);
